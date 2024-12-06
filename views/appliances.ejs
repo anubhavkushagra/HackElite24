@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appliances - Energy Monitoring System</title>
+  <link rel="stylesheet" href="/css/styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+  <header>
+    <h1>Energy Monitoring System</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/appliances">Appliances</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Appliance Energy Usage</h2>
+      <% if (appliances && appliances.length > 0) { %>
+        <table>
+          <thead>
+            <tr>
+              <th>Appliance</th>
+              <th>Energy Usage (kWh)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% appliances.forEach(appliance => { %>
+              <tr>
+                <td><%= appliance.name %></td>
+                <td><%= appliance.energyUsage %></td>
+                <td><%= appliance.isActive ? "Active" : "Inactive" %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      <% } else { %>
+        <p>No appliance data available.</p>
+      <% } %>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Energy Monitoring System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
