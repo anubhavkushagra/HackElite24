@@ -26,3 +26,4 @@ router.delete("/delete/:id", deleteAppliance);
 
 module.exports = router;
 
+

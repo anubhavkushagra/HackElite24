@@ -27,3 +27,4 @@ const applianceSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("Appliance", applianceSchema);
+

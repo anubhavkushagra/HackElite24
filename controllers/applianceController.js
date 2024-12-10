@@ -1,15 +1,3 @@
-// const Appliance = require('../models/Appliance');
-
-// exports.getApplianceData = async (req, res) => {
-//     try {
-//         const appliances = await Appliance.find({});
-//         res.json(appliances);
-//     } catch (err) {
-//         res.status(500).json({ error: "Failed to fetch appliance data" });
-//     }
-// };
-
-
 const Appliance = require("../models/Appliance"); // Assuming you have a Mongoose model for appliances
 
 // Add a new appliance
@@ -46,7 +34,7 @@ const updateAppliance = async (req, res) => {
     const updatedAppliance = await Appliance.findByIdAndUpdate(
       id,
       { name, energyUsage, isActive },
-      { new: true, runValidators: true }
+      { new: true, runValidators: true } // Ensure validations run
     );
 
     if (!updatedAppliance) {
@@ -55,10 +43,11 @@ const updateAppliance = async (req, res) => {
 
     res.status(200).json({ message: "Appliance updated successfully", appliance: updatedAppliance });
   } catch (err) {
-    console.error(err);
+    console.error("Update Error:", err.message); // Log the error message
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
 
 // Delete an appliance
 const deleteAppliance = async (req, res) => {

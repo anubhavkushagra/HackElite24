@@ -31,10 +31,14 @@
 // app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
+
+
+
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const applianceRoutes = require("./routes/applianceRoutes");
+const sensorRoutes = require("./routes/sensorRoutes");
 
 dotenv.config();
 connectDB();
@@ -47,9 +51,12 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded data
 
 // Routes
 app.use("/api/appliances", applianceRoutes);
+app.use("/api/sensors", sensorRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
