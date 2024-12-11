@@ -3,30 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Energy Monitoring System</title>
-  <link rel="stylesheet" href="/css/styles.css"> <!-- Link to external CSS -->
+  <title>EnergAI | AI-Based Energy Monitoring System</title>
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+
 </head>
 <body>
-  <header>
-    <h1>AI-Based Energy Monitoring System</h1>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="title">
+      <i class="fa-solid fa-dice-d6"></i>EnergAI
+    </div>
     <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/appliances">Appliances</a></li>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#feature">Features</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Welcome to Your Energy Monitoring Dashboard</h2>
-      <p>Track and optimize your energy usage with AI-powered insights.</p>
-      <a href="/appliances" class="btn">View Appliance Data</a>
-    </section>
-  </main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <video class="hero-video" autoplay loop muted playsinline>
+      <source src="85.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Welcome to EnergAI</h1>
+      <p>Revolutionizing energy consumption with AI-based smart home monitoring solutions.</p>
+      <a href="./signin.html" class="btn">Join the Smart Energy Revolution</a>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2024 Energy Monitoring System. All Rights Reserved.</p>
+  <!-- Features Section -->
+  <section id="feature" class="section">
+    <h2>Our Key Features</h2>
+    <p>Explore how our intelligent AI system simplifies energy monitoring and consumption insights.</p>
+    <div class="feature-cards">
+      <a href="./signin.html" class="btn8"><div class="card">
+        <h3>Real-Time Monitoring</h3>
+        <p>Monitor energy consumption in real time with AI algorithms.</p>
+      </div></a>
+      <a href="./signin.html" class="btn8"><div class="card">
+        <h3>Single Sensor Insight</h3>
+        <p>Track appliance energy usage with advanced AI.</p>
+      </div></a>
+      <a href="./signin.html" class="btn8"><div class="card">
+        <h3>Cost Effective</h3>
+        <p>Save money with efficient energy tracking.</p>
+      </div></a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section services">
+    <video class="background-video" autoplay loop muted playsinline>
+      <source src="25.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h2>Our Services</h2>
+    <p>Discover the advanced services offered by EnergAI to enhance your energy management experience.</p>
+    <div class="service-slider">
+      <div class="slider-container">
+        <div class="slider-item">
+          <h3>Real-Time Energy Monitoring</h3>
+          <p>Get instant updates on your energy consumption.</p>
+        </div>
+        <div class="slider-item">
+          <h3>AI-Powered Insights</h3>
+          <p>Receive predictive insights for energy efficiency.</p>
+        </div>
+        <div class="slider-item">
+          <h3>Cost Analysis</h3>
+          <p>Track and manage your energy costs effectively.</p>
+        </div>
+        <div class="slider-item">
+          <h3>Custom Reports</h3>
+          <p>Generate detailed energy usage reports tailored to your needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About EnergAI</h2>
+    <p>
+      EnergAI is a cutting-edge AI-based energy monitoring system designed to revolutionize how households and businesses manage energy consumption. Our mission is to empower individuals with real-time insights, enabling smarter decisions and fostering sustainability.
+    </p>
+
+    <h3>Meet Our Founders</h3>
+    <div class="founder-cards">
+      <div class="card">
+        <img src="preview2.png" alt="Md Shoyeb" class="founder-photo" />
+        <h3>Md Shoyeb</h3>
+        <p>SJCE</p>
+      </div>
+      <div class="card">
+        <img src="preview2.png" alt="Anubhav Kushagra" class="founder-photo" />
+        <h3>Anubhav Kushagra</h3>
+        <p>Stanford University, AI Research</p>
+      </div>
+      <div class="card">
+        <img src="preview2.png" alt="Dhrubraj Debnath" class="founder-photo" />
+        <h3>Dhrubraj Debnath</h3>
+        <p>Harvard University, Data Science</p>
+      </div>
+      <div class="card">
+        <img src="preview2.png" alt="Adnan Hussain" class="founder-photo" />
+        <h3>Adnan Hussain</h3>
+        <p>UC Berkeley, Energy Systems</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or want to learn more about our services, reach out to us directly!</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2024 EnergAI. All Rights Reserved.</p>
   </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>
