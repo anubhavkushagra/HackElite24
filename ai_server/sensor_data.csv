@@ -1,0 +1,5 @@
+Light1,Light2,Fan,Temp,Presence,Action
+2,2,3,33,True,Turn off fan
+0,0,0,25,False,Turn off all appliances
+1,1,0,28,True,Turn on fan
+3,3,1,30,False,Turn off lights
