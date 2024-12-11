@@ -2,37 +2,37 @@ const mongoose = require("mongoose");
 
 const sensorSchema = new mongoose.Schema(
   {
-    name: {
-      type: String,
-      required: [true, "Sensor name is required"],
-      trim: true,
-    },
-    location: {
-      type: String,
-      required: [true, "Location is required"],
-      trim: true,
-    },
-    status: {
-      type: Boolean,
-      required: [true, "Status is required"],
-    },
-    light1_current_consumption_value: {
+    // name: {
+    //   type: String,
+    //   required: [true, "Sensor name is required"],
+    //   trim: true,
+    // },
+    // location: {
+    //   type: String,
+    //   required: [true, "Location is required"],
+    //   trim: true,
+    // },
+    // status: {
+    //   type: Boolean,
+    //   required: [true, "Status is required"],
+    // },
+    Light1: {
       type: Number,
       required: [true, "Current consumption value for light1 is required"],
     },
-    light2_current_consumption_value: {
+    Light2: {
       type: Number,
       required: [true, "Current consumption value for light2 is required"],
     },
-    fan_current_consumption_value: {
+    Fan: {
       type: Number,
       required: [true, "Current consumption value for fan is required"],
     },
-    temperature: {
+    Temp: {
       type: Number,
       required: [true, "Temperature value is required"],
     },
-    human_presence: {
+    Presence: {
       type: Boolean,
       required: [true, "Human presence status is required"],
     },

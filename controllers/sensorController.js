@@ -4,22 +4,24 @@ const Sensor = require("../models/Sensor");
 // Add a new sensor
 const addSensor = async (req, res) => {
   try {
-    const { name, location, status, light1_current_consumption_value, light2_current_consumption_value, fan_current_consumption_value, temperature, human_presence } = req.body;
+    // const { name, location, status, Light1, Light2, Fan, Temp,Presence } = req.body;
+    const { Light1, Light2, Fan, Temp,Presence } = req.body;
 
     // Validate request body
-    if (!name || !location || status === undefined || light1_current_consumption_value === undefined || light2_current_consumption_value === undefined || fan_current_consumption_value === undefined || temperature === undefined || human_presence === undefined) {
+    // if (!name || !location || status === undefined || Light1 === undefined || Light2 === undefined || Fan === undefined || Temp === undefined ||Presence === undefined) {
+    if (Light1 === undefined || Light2 === undefined || Fan === undefined || Temp === undefined ||Presence === undefined) {
       return res.status(400).json({ error: "All fields are required" });
     }
 
     const newSensor = new Sensor({
-      name,
-      location,
-      status,
-      light1_current_consumption_value,
-      light2_current_consumption_value,
-      fan_current_consumption_value,
-      temperature,
-      human_presence
+      // name,
+      // location,
+      // status,
+      Light1,
+      Light2,
+      Fan,
+      Temp,
+      Presence
     });
 
     await newSensor.save();
@@ -60,7 +62,7 @@ const processSensorData = async (req, res) => {
     await newSensor.save();
 
     // Send data to AI model
-    const aiResponse = await axios.post("http://localhost:5000/ai/predict", sensorData);
+    const aiResponse = await axios.post("http://localhost:5000/predict", sensorData);
 
     // Return AI's response
     res.status(200).json({
